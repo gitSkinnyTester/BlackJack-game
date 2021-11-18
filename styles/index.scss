@@ -1,0 +1,345 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+body {
+  background-color: rgb(58, 58, 58);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-frame {
+  background-color: rgb(25, 177, 131);
+  max-width: 960px;
+  width: 100%;
+  height: 640px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+}
+
+.dealerArea,
+.playerArea {
+  width: 100%;
+  height: 50%;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-area,
+.both-results,
+.player-actions {
+  width: 100%;
+  height: 50%;
+}
+
+.card-area {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 101px;
+  height: 150px;
+  border: 2px solid black;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  box-shadow: 2px 4px;
+}
+
+.plFirstCard,
+.plSecondCard,
+.dlFirstCard,
+.dlSecondCard {
+  background-image: url("assets/playing-cards-assets/extra/back.png");
+}
+
+.both-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Orelega One", cursive;
+  margin: 12px 0;
+  background-color: white;
+  border-radius: 5px;
+
+  .dealer-result {
+    height: 40%;
+    text-align: end;
+    padding-right: 35px;
+    font-size: 2em;
+    padding-top: 15px;
+  }
+
+  .overall-result {
+    height: 10%;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .player-result {
+    height: 50%;
+    padding-left: 35px;
+    font-size: 2em;
+    margin-top: 10px;
+  }
+}
+
+.player-added,
+.dealer-added {
+  display: flex;
+}
+
+.title {
+  font-family: "Orelega One", cursive;
+  color: rgb(255, 255, 255);
+}
+
+.player-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  margin: 6px;
+  font-family: "Rubik", sans-serif;
+  background-color: rgb(240, 240, 240);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.btn:disabled {
+  background-color: rgb(151, 151, 151);
+  color: rgb(247, 247, 247);
+}
+
+.btns {
+  width: auto;
+  display: flex;
+
+  .btn-1 {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-2 {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.score-point {
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  font-size: 1em;
+  margin-top: 18px;
+  font-family: "Roboto Mono", monospace;
+}
+
+@media (min-width: 950px) {
+  .btns {
+    width: auto;
+    display: flex;
+    margin-top: 18px;
+    .btn-1 {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+    }
+    .btn-2 {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .score-point {
+    margin-top: 18px;
+    font-size: 1.5em;
+  }
+
+  .both-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Orelega One", cursive;
+    margin: 12px 0;
+    background-color: white;
+    border-radius: 5px;
+
+    .dealer-result {
+      height: 40%;
+      text-align: end;
+      padding-right: 185px;
+      font-size: 2;
+      padding-top: 15px;
+    }
+
+    .overall-result {
+      height: 10%;
+      font-size: 2.2em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .player-result {
+      height: 50%;
+      padding-left: 185px;
+      font-size: 2;
+    }
+  }
+
+  .main-frame {
+    background-color: rgb(25, 177, 131);
+    max-width: 960px;
+    width: 100%;
+    height: 640px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    padding-top: 15px;
+  }
+}
